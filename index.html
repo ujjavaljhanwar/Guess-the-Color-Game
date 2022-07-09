@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Color</title>
+    <link rel="stylesheet" href="guessColor.css">
+    <link rel="stylesheet" href="page.css">
+
+    <!-- font-family: 'Roboto', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body onload="generateNewColor()">
+    <div class="main">
+        
+        <!-- For the Heading -->
+        <div class="text">
+            <h1>Guess The Color</h1>
+            <div class="color">
+                <span class="red circle"></span>
+                <span>+</span>
+                <span class="green circle"></span>
+                <span>+</span>
+                <span class="blue circle"></span>
+                <span>=</span>
+                <span class="ans circle">?</span>
+            </div>
+        </div>
+        
+        <!-- It will cover all options. -->
+        <div class="box">
+            <div class="option1 option"><span class="select">Select Me!</span></div>
+            <div class="option2 option"><span class="select">Select Me!</span></div>
+            <div class="option3 option"><span class="select">Select Me!</span></div>
+            <div class="option4 option"><span class="select">Select Me!</span></div>
+            <div class="option5 option"><span class="select">Select Me!</span></div>
+            <div class="option6 option"><span class="select">Select Me!</span></div>
+            <div class="option7 option"><span class="select">Select Me!</span></div>
+            <div class="option8 option"><span class="select">Select Me!</span></div>
+            <div class="option9 option"><span class="select">Select Me!</span></div>
+            <div class="option10 option mediumOptions"><span class="select">Select Me!</span></div>
+            <div class="option11 option mediumOptions"><span class="select">Select Me!</span></div>
+            <div class="option12 option mediumOptions"><span class="select">Select Me!</span></div>
+            <div class="option13 option mediumOptions"><span class="select">Select Me!</span></div>
+            <div class="option14 option mediumOptions"><span class="select">Select Me!</span></div>
+            <div class="option15 option mediumOptions"><span class="select">Select Me!</span></div>
+            <div class="option16 option mediumOptions"><span class="select">Select Me!</span></div>
+            <div class="option17 option hardOptions"><span class="select">Select Me!</span></div>
+            <div class="option18 option hardOptions"><span class="select">Select Me!</span></div>
+            <div class="option19 option hardOptions"><span class="select">Select Me!</span></div>
+            <div class="option20 option hardOptions"><span class="select">Select Me!</span></div>
+            <div class="option21 option hardOptions"><span class="select">Select Me!</span></div>
+            <div class="option22 option hardOptions"><span class="select">Select Me!</span></div>
+            <div class="option23 option hardOptions"><span class="select">Select Me!</span></div>
+            <div class="option24 option hardOptions"><span class="select">Select Me!</span></div>
+            <div class="option25 option hardOptions"><span class="select">Select Me!</span></div>
+        </div>
+
+        <!-- It will cover all buttons. -->
+        <div class="buttons">
+            <button id="newColor" onclick="generateNewColor();">Get New Color</button>
+            <div class="level">
+                <button id="easyLevel" onclick="easy();">Easy</button>
+                <button id="mediumLevel" onclick="medium();">Medium</button>
+                <button id="hardLevel" onclick="hard();">Hard</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Landing Page -->
+    <div class="landing page">
+        <div class="content">
+            <h1>Welcome to Guess The Color</h1>
+            <h3>Select The Difficulty Level.</h3>
+            <div class="pageLevels">
+                <button id="landingEasy" onclick="easy(); hideLanding();">Easy</button>
+                <button id="landingMedium" onclick="medium(); hideLanding();">Medium</button>
+                <button id="landingHard" onclick="hard(); hideLanding();">Hard</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- This will displayed when user will guess correct color. -->
+    <div class="correctGuess page">
+        <div class="content">
+            <h1>Hurray!!!</h1>
+            <h3>You Guessed The Correct Color.</h3>
+            <button id="newColor" onclick="generateNewColor(); hideCorrectGuess();">Get New Colors</button>
+        </div>
+    </div>
+
+    <!-- This will displayed when user will guess wrong color. -->
+    <div class="wrongGuess page">
+        <div class="content">
+            <h1>Oops!!!</h1>
+            <h3>You Guessed Wrong Color.</h3>
+            <div class="wrongButtons">
+                <button id="newColor" onclick="generateNewColor(); hideWrongGuess();">Play Again With New Colors</button>
+                <button id="landingEasy" onclick="hideWrongGuess();">Try Again With Same Colors</button>
+            </div>
+        </div>
+    </div>
+    <p class="lp">©  Made with 🧡 by Ujjaval Jhanwar</p>
+
+    <script src="guessColor.js"></script>
+</body>
+</html>

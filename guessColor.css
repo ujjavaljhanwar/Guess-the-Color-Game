@@ -1,0 +1,163 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: black;
+}
+
+/* Main container */
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Heading */
+.text{
+    width: max(65%,887px);
+    margin: 0px auto 0px auto;
+    background-color: rgb(152,153,165);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.text h1{
+    margin: 5px;
+}
+.color{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 5px;
+}
+span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+.circle{
+    background-color: white;
+    border: 2px solid white;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}
+
+/* Options Box */
+.box{
+    height: 70%;
+    width: max(65%,887px);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+}
+.option{
+    background-color: white;
+    border-radius: 10px;
+    border: 3px solid white;
+    cursor: pointer;
+}
+
+/* Select Me span */
+.select{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translate(50%,50%) scale(0);
+    height: 50%;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    border-radius: 15px;
+    border: 2px solid black;
+    color: white;
+    transition: all 0.25s linear;
+}
+.option:hover > span{
+    transform: translate(50%,50%) scale(1);
+}
+
+/* Initilly options for Medium and Hard will be not displayed*/
+.mediumOptions, .hardOptions{
+    display:none;
+}
+.buttons{
+    display: flex;
+    width: max(65%,887px);
+    justify-content: space-between;
+}
+
+/* Buttons for level */
+.level{
+    display: flex;
+    justify-content: space-between;
+    min-width: 40%;
+}
+button {
+    min-width: min(30%,100px);
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background-size: 120% auto;
+    background-image: linear-gradient(315deg, #000428 0%, #004e92 75%);
+}
+button:hover {
+    background-position: right center;
+}
+button:active {
+    top: 2px;
+}
+
+@media only screen and (max-width: 992px) {
+    .box, .text, .buttons{
+        width: 90%;
+        margin: 5px auto;
+    }
+    .level{
+        margin: 3px 0;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .buttons{
+        flex-direction: column-reverse;
+    }
+    .level{
+        width: 100%;
+    }
+    .option > span{
+        display: none;
+    }
+    .main{
+        height: 90vh;
+    }
+}

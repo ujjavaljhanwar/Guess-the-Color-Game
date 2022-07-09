@@ -1,0 +1,98 @@
+/* CSS for landing, correceGuess and wrondGuess page */
+.page{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: #00000050;
+    backdrop-filter: blur(5px);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+}
+.correctGuess{
+    display: none;
+}
+.wrongGuess{
+    display: none;
+}
+
+/* CSS to hide the page */
+.hide{
+    animation: hide 0.5s linear 0s 1 forwards;
+}
+@keyframes hide {
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+
+/* CSS to show the page */
+.show{
+    animation: show 0.5s linear 0s 1 forwards;
+}
+@keyframes show {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+/* For Content in the every page */
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #00000050;
+    height: 50%;
+    width: 50%;
+    border-radius: 50px;
+    border: 2px solid black;
+}
+.pageLevels, .wrongButtons{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+@media only screen and (max-width: 1200px) {
+    .wrongButtons{
+        width: max(70%,420px);
+    }    
+}
+@media only screen and (max-width: 1024px) {
+    .content{
+        width: max(50%,512px);
+    }    
+}
+@media only screen and (max-width: 768px) {
+    .content{
+        width: max(50%,290px);
+    }   
+    .pageLevels{
+        width: 80%;
+    } 
+    .wrongButtons{
+        flex-direction: column;
+        width: max(70%,250px);
+    }
+    .wrongButtons > button{
+        margin: 5px 0;
+    }
+}
+.lp{
+    text-align: center;
+    color: whitesmoke;
+    font-size: .75rem;
+    padding: 2;
+    margin-top: 20px ;
+}
